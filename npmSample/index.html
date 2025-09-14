@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>فهرست دانشجویان</title>
+    <style>
+        table{
+            width: 100%;
+        }
+        tr>th{
+            background-color: black;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <table id="myTable">
+        <tr>
+            <th>نام</th>
+            <th>شماره ملی</th>
+            <th>تولد</th>
+        </tr>
+    </table>
+
+    <script>
+        const rowData = ["علی", "004", "1380"];
+
+        let newRowHTML = "<tr>";
+        for (let i = 0; i < rowData.length; i++) {
+            newRowHTML += "<td>" + rowData[i] + "</td>";
+        }
+        newRowHTML += "</tr>";
+
+        document.getElementById("myTable").innerHTML += newRowHTML;
+    </script>
+
+</body>
+
+</html>
